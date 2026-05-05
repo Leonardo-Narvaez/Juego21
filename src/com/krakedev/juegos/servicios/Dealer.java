@@ -44,4 +44,13 @@ public class Dealer {
 		int numerico = (int) (Math.random() * (maximo + 1));
 		return numerico;
 	}
+
+	public Carta entregarCarta() {
+		int posicion = generarAleatorio(baraja.size() - 1);
+		Carta c = baraja.get(posicion);
+		baraja.remove(posicion);
+
+		return c;
+
+	}
 }
