@@ -14,4 +14,11 @@ public class Jugador {
 		cartas.add(carta);
 	}
 
+	public void imprimir() {
+		System.out.println("Nickname: " + nickname);
+		System.out.println("---Cartas Asignadas---");
+		for (Carta c : cartas) {
+			c.imprimir();
+		}
+	}
 }
