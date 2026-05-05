@@ -6,18 +6,18 @@ import java.util.List;
 import com.krakedev.juegos.entidades.Carta;
 
 public class Dealer {
-	private ArrayList<Carta> baraja;
+	private ArrayList<Carta> naipe;
 
-	public ArrayList<Carta> getBaraja() {
-		return baraja;
+	public ArrayList<Carta> getNaipe() {
+		return naipe;
 	}
 
-	public void setBaraja(ArrayList<Carta> baraja) {
-		this.baraja = baraja;
+	public void setNaipe(ArrayList<Carta> naipe) {
+		this.naipe = naipe;
 	}
 
 	public Dealer() {
-		baraja = new ArrayList<>();
+		naipe = new ArrayList<>();
 		generarNaipe();
 
 	}
@@ -28,14 +28,14 @@ public class Dealer {
 				List.of("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"));
 		for (String simbolo : palo) {
 			for (String valor1 : valor) {
-				baraja.add(new Carta(valor1, simbolo));
+				naipe.add(new Carta(valor1, simbolo));
 			}
 
 		}
 	}
 
 	public void imprimirNaipe() {
-		for (Carta naipe : baraja) {
+		for (Carta naipe : naipe) {
 			naipe.imprimir();
 		}
 	}
@@ -46,9 +46,9 @@ public class Dealer {
 	}
 
 	public Carta entregarCarta() {
-		int posicion = generarAleatorio(baraja.size() - 1);
-		Carta c = baraja.get(posicion);
-		baraja.remove(posicion);
+		int posicion = generarAleatorio(naipe.size() - 1);
+		Carta c = naipe.get(posicion);
+		naipe.remove(posicion);
 
 		return c;
 

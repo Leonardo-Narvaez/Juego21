@@ -9,7 +9,7 @@ public class TestAleatorio {
 		Dealer d = new Dealer();
 
 		for (int i = 0; i <= 100; i++) {
-			System.out.println(d.generarAleatorio(d.getBaraja().size()));
+			System.out.println(d.generarAleatorio(d.getNaipe().size()));
 		}
 	}
 
