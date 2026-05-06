@@ -29,4 +29,13 @@ public class Carta {
 		this.palo = palo;
 	}
 
+	public Carta(String valor, String palo) {
+		this.valor = valor;
+		this.palo = palo;
+	}
+
+	public void imprimir() {
+		System.out.println(valor + " - " + palo + ", ValorJuego = " + valorJuego);
+	}
+
 }
